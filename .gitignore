@@ -1,3 +1,13 @@
+target/
+.classpath
+.project
+.settings/
+*.iml
+*/*.iml
+.idea/
+*.bak
+.DS_Store
+
 *.class
 
 # Package Files #

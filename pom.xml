@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>siteminder-integration</groupId>
+    <artifactId>siteminder-integration</artifactId>
+    <version>1.0</version>
+    <packaging>pom</packaging>
+
+    <name>SiteMinder Integration for JBoss EAP 6 and JBoss JPP 6</name>
+
+    <!-- Modules -->
+    <modules>
+        <module>common</module>
+        <module>eap-6</module>
+        <module>jpp-6</module>
+    </modules>
+
+    <!-- Properties -->
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <version.javaee-api>6.0</version.javaee-api>
+        <version.jbossweb>7.0.16.Final</version.jbossweb>
+        <version.jboss-logging>3.1.2.GA</version.jboss-logging>
+        <version.picketbox>4.0.15.Final</version.picketbox>
+        <version.exo.core.component.security.core>2.5.4-GA</version.exo.core.component.security.core>
+        <version.exo.portal.component.web.oauth-common>3.6.2.Final</version.exo.portal.component.web.oauth-common>
+    </properties>
+
+    <!-- Dependencies -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>siteminder-integration</groupId>
+                <artifactId>common</artifactId>
+                <version>1.0.0</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>javax</groupId>
+                <artifactId>javaee-api</artifactId>
+                <version>6.0</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.web</groupId>
+                <artifactId>jbossweb</artifactId>
+                <version>7.0.16.Final</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.logging</groupId>
+                <artifactId>jboss-logging</artifactId>
+                <version>3.1.2.GA</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.picketbox</groupId>
+                <artifactId>picketbox</artifactId>
+                <version>4.0.15.Final</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.exoplatform.core</groupId>
+                <artifactId>exo.core.component.security.core</artifactId>
+                <version>2.5.4-GA</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.gatein.portal</groupId>
+                <artifactId>exo.portal.component.web.oauth-common</artifactId>
+                <version>3.6.2.Final</version>
+                <scope>provided</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <!-- Repositories -->
+    <repositories>
+
+        <repository>
+            <id>jboss</id>
+            <name>https://repository.jboss.org/nexus/content/groups/public-jboss/</name>
+            <url>https://repository.jboss.org/nexus/content/groups/public-jboss/</url>
+        </repository>
+
+        <repository>
+            <id>jboss-public-repository-group</id>
+            <name>JBoss Public Maven Repository Group</name>
+            <url>http://repository.jboss.org/nexus/content/groups/public/</url>
+            <layout>default</layout>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>repository.jboss.org</id>
+            <name>JBoss Repository</name>
+            <layout>default</layout>
+            <url>http://repository.jboss.org/maven2/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>snapshots.jboss.org</id>
+            <name>JBoss Snapshots Repository</name>
+            <layout>default</layout>
+            <url>http://snapshots.jboss.org/maven2/</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+        </repository>
+
+        <repository>
+            <id>repository.exoplatform.org</id>
+            <name>exoplatform release Repository</name>
+            <layout>default</layout>
+            <url>http://repository.exoplatform.org/public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+
+        <repository>
+            <id>soapUI</id>
+            <url>http://www.eviware.com/repository/maven2/</url>
+        </repository>
+
+    </repositories>
+
+</project>
