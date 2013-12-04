@@ -12,7 +12,6 @@ import java.util.Set;
 
 /**
  * Questa classe sostituisce quella di JBoss EAP 5, per garantire la retro compatibilita' con la libreria "SSOUtilsClientWebJBOSS.jar".
- *
  * @author lfugaro@redhat.com
  */
 public class JaasSecurityManager {
